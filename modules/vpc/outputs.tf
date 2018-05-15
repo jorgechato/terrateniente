@@ -1,6 +1,10 @@
 # Provides subnet id for each subnet created
-output "subnet_ids" {
-	value = "${aws_subnet.subnet.*.id}"
+output "private_subnet_id" {
+	value = "${aws_subnet.private.id}"
+}
+
+output "public_subnet_id" {
+	value = "${aws_subnet.public.id}"
 }
 
 # Provides the ID of the vpc
